@@ -381,3 +381,227 @@ body {
   color: #e6c563; /* Gold color */
   text-shadow: 0 0 5px #e6c563, 0 0 10px #e6c563, 0 0 20px #e6c563, 0 0 40px #e6c563;
 }
+
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.glow-text {
+  margin: 10px 0; /* Adds space between each item */
+}
+
+.skill-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  background-color: #444;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  margin: auto;
+  overflow: hidden; /* Ensures the image doesn't overflow the box */
+}
+
+.skill-box:hover {
+  transform: scale(1.1);
+}
+
+.skill-img {
+  max-width: 100%; /* Ensures the image width does not exceed the box */
+  max-height: 100%; /* Ensures the image height does not exceed the box */
+  object-fit: contain; /* Keeps the image within the box without distortion */
+  display: block;
+}
+
+#contact-form { /* range of block in contact */
+  display: flex;
+  flex-direction: row; /* Aligns items horizontally */
+  justify-content: space-around; /* Adds space around items */
+  align-items: center; /* Centers items vertically */
+}
+
+.glow-text {
+  margin: 2px; /* Adjusts spacing between items */
+}
+
+.glow-text {
+  font-family: 'Roboto', sans-serif; /* Minimalistic font */
+  color: #e6c563; /* Gold color for the rest of the text */
+  text-shadow: 0 0 5px #e6c563, 0 0 10px #e6c563, 0 0 20px #e6c563, 0 0 40px #e6c563;
+  font-size: 1.2em; /* Adjust the size as needed */
+  margin: 0.5rem 0;
+}
+
+.glow-red {
+  color: #ff6666; /* Light red color */
+  text-shadow: 0 0 5px #ff6666, 0 0 10px #ff6666, 0 0 20px #ff6666, 0 0 40px #ff6666;
+}
+
+.glow-white {
+  color: #ffffff; /* White color */
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #ffffff;
+}
+
+.glow-green {
+  color: #32cd32; /* Green color */
+  text-shadow: 0 0 5px #32cd32, 0 0 10px #32cd32, 0 0 20px #32cd32, 0 0 40px #32cd32;
+}
+
+.intro h1 {
+  color: pink; /* Initial color */
+  transition: color 0.3s ease; /* Smooth transition effect */
+}
+
+.intro h1:hover {
+  color: gold; /* Color on hover */
+}
+
+/* Snowflake styling */
+.snowflake {
+  position: absolute;
+  top: -10px;
+  background: white;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: fall 5s linear infinite;
+}
+
+/* Keyframes for the falling animation */
+@keyframes fall {
+  to {
+    transform: translateY(100vh);
+  }
+}
+
+.snow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.christmas-tree {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.star {
+  width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 35px solid yellow;
+  transform: rotate(35deg);
+  margin-bottom: -15px;
+}
+
+.tree-section {
+  background-color: green;
+  border: 2px solid darkgreen;
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  margin-bottom: -20px;
+}
+
+.section1 { border-bottom: 70px solid green; }
+.section2 { border-bottom: 90px solid green; }
+.section3 { border-bottom: 110px solid green; }
+.section4 { border-bottom: 130px solid green; }
+
+.tree-base {
+  width: 40px;
+  height: 60px;
+  background-color: sienna;
+  margin-top: -20px;
+}
+
+/* Shooting star styling */
+.shooting-star-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 9999; /* Ensures the shooting star is above other content */
+}
+
+.shooting-star {
+  position: absolute;
+  top: 50%; /* Start position vertically */
+  left: -100px; /* Start position horizontally, off-screen */
+  width: 5px;
+  height: 5px;
+  background-color: rgb(255, 6, 6);
+  border-radius: 50%;
+  box-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px white, 0 0 40px white;
+  animation: shooting-star 2s ease-out infinite; /* Animation timing */
+}
+
+/* Keyframes for the shooting star animation */
+@keyframes shooting-star {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-300px) translateX(300px) scale(0.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-600px) translateX(600px) scale(0);
+    opacity: 0;
+  }
+}
+.countdown-timer {
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  color: #d14e4e; /* Gold color */
+  text-shadow: 0 0 5px #166a0d, 0 0 10px #166a0d, 0 0 20px #166a0d, 0 0 40px #166a0d;
+  margin-top: 20px;
+}
+
+#timer {
+  font-size: 1.5em;
+}
+
+#timer span {
+  display: inline-block;
+  min-width: 70px;
+  margin: 0 10px;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center; /* Centers the buttons horizontally */
+  gap: 20px; /* Adds space between the buttons */
+  margin: 20px 0; /* Adds some top and bottom margin */
+}
+
+.skill-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+.skill-img {
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Adjust size as needed */
+}
+
