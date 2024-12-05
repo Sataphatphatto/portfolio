@@ -25,10 +25,7 @@
     <h7></h7>
     <h8></h8>
     <h9 class="large-text">💻</h9>
-
-   
     
-
     <nav>
       <ul>
         <li><a href="#about">About</a></li>
@@ -40,9 +37,12 @@
   <main>
     <section id="about">
       <h2 class="glow">About me</h2>
-      <img src="pfp.png" alt="Picture of Sataphat Phanichawong" class="profile-pic">
+      <img src="pfp.png" alt="Picture of subject1" class="profile-pic">
       <p class="glow-text">Sataphat Phanichawong</p>
-      <p class="glow-text interactive-bg">Studying @ Assumption College</p>
+      <p class="glow-text interactive-bg">
+        Studying <span class="glow-green">@</span> <span class="glow-red">Assumption</span> <span class="glow-white">College</span>
+      </p>
+      
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -91,9 +91,6 @@
       <img src="lualogo.png" alt="lualogo" class="skill-img">
       <p>Lua</p>
 
-
-
-    
   </section>
 </section>
 
@@ -110,13 +107,41 @@
     
 </style>
 
-      <form id="contact-form">
-        <p class="glow-text interactive-bg" id="copy-email">phattoforwork@gmail.com</p>
+<div id="contact-buttons" class="contact-buttons">
+  <div class="skill-box" id="email-button">
+    <img src="mail.png" alt="Mail" class="skill-img">
+    <p>Mail</p>
+  </div>
+  <div class="skill-box" id="discord-button">
+    <img src="discordlogo.png" alt="Discord Logo" class="skill-img">
+    <p>Discord</p>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('email-button').addEventListener('click', function() {
+      const email = 'phattoforwork@gmail.com';
+      alert('Email: ' + email);
+    });
+
+    document.getElementById('discord-button').addEventListener('click', function() {
+      const discordProfileUrl = 'https://discord.com/users/875212025230397501';
+      window.open(discordProfileUrl, '_blank');
+    });
+  });
+</script>
+
+       
+        
+        
       </form>
     </section>
   </main>
   <footer>
     <footer> <p class="footer-text">&copy; 2024 Sataphat Phanichawong. All rights reserved.</p> </footer>
+
+
     
   </footer>
   <script src="scripts.js"></script>
@@ -131,3 +156,82 @@
   </script>
 </body>
 </html>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const snowContainer = document.createElement('div');
+    snowContainer.classList.add('snow-container');
+    document.body.appendChild(snowContainer);
+
+    for (let i = 0; i < 6; i++) { // Change 100 to the number of snowflakes you want
+      const snowflake = document.createElement('div');
+      snowflake.classList.add('snowflake');
+      snowflake.style.left = `${Math.random() * 100}vw`;
+      snowflake.style.animationDelay = `${Math.random() * 5}s`;
+      snowContainer.appendChild(snowflake);
+    }
+  });
+</script>
+
+<!-- Place this where you want the Christmas tree to appear -->
+<div class="christmas-tree">
+  <div class="star"></div>
+  <div class="tree-section section1"></div>
+  <div class="tree-section section2"></div>
+  <div class="tree-section section3"></div>
+  <div class="tree-section section4"></div>
+  <div class="tree-base"></div>
+</div>
+
+<!-- Add this to your HTML where appropriate, probably near the bottom of the body tag -->
+<div class="shooting-star-container">
+  <div class="shooting-star"></div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const shootingStarContainer = document.querySelector('.shooting-star-container');
+    const shootingStar = document.querySelector('.shooting-star');
+
+    function animateShootingStar() {
+      shootingStar.style.left = `${Math.random() * 10}vw`;
+      shootingStar.style.top = `${Math.random() * 50 + 10}vh`; // Ensure it starts within the top half
+    }
+
+    setInterval(animateShootingStar, 1500); // Adjust time to change the frequency of the shooting star
+  });
+</script>
+
+<div id="countdown-timer" class="countdown-timer">
+  <h2>Countdown to Christmas</h2>
+  <div id="timer">
+    <span id="days"></span> Days
+    <span id="hours"></span> Hours
+    <span id="minutes"></span> Minutes
+    <span id="seconds"></span> Seconds
+  </div>
+</div>
+<script>
+  function updateCountdown() {
+    const now = new Date();
+    const nextChristmas = new Date(now.getFullYear(), 11, 25); // Christmas on December 25th
+    if (now.getMonth() == 11 && now.getDate() > 25) {
+        nextChristmas.setFullYear(nextChristmas.getFullYear() + 1);
+    }
+    
+    const diff = nextChristmas - now;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    document.getElementById('days').innerText = days;
+    document.getElementById('hours').innerText = hours;
+    document.getElementById('minutes').innerText = minutes;
+    document.getElementById('seconds').innerText = seconds;
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown(); // Initial call to set the timer immediately
+</script>
